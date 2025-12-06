@@ -1,13 +1,11 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist/public",
-  "framework": "vite",
+  "framework": null,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" }
-  ],
-  "functions": {
-    "api/index.ts": {
-      "runtime": "@vercel/node@3.0.0"
-    }
-  }
+    { "source": "/api/contact", "destination": "/api/contact" },
+    { "source": "/api/newsletter", "destination": "/api/newsletter" },
+    { "source": "/api/reviews", "destination": "/api/reviews" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
